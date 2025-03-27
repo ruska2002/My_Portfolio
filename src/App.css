@@ -332,42 +332,81 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-left: 50px;
 }
 
-/************ Skills Css ************/
-
-.skill {
-  padding: 0 0 50px 0;
-  position: relative;
-}
-.skill-bx {
-  background: linear-gradient(rgba(226, 96, 174, 0.5), rgba(230, 204, 39, 0.5));
-  border-radius: 64px;
-  text-align: center;
-  padding: 60px 50px;
-  margin-top: -60px;
-}
-.skill h2,
-h5 {
-  font-size: 45px;
-  font-weight: 700;
-}
-.skill p {
-  color: #fff;
-  font-size: 18px;
-  letter-spacing: 0.8px;
-  line-height: 1.5em;
-  margin: 14px 0 75px 0;
-}
-.skill-slider {
-  width: 80%;
-  margin: 0 auto;
-  position: relative;
-}
-.skill-slider .item img {
-  width: 50%;
-  margin: 0 auto 0 auto;
-}
-
 /************ About me ************/
+/* Default styles */
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.wholediv {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.photo img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.aboutme {
+  max-width: 600px;
+}
+
+.hobby {
+  margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  .wholediv {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .photo img {
+    width: 450px;
+  }
+
+  .aboutme {
+    text-align: center;
+  }
+
+  .hobby h2 {
+    text-align: center;
+  }
+
+  .hobby p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 10px;
+  }
+
+  .wholediv {
+    padding: 10px;
+  }
+
+  .aboutme h1 {
+    font-size: 1.5rem;
+  }
+
+  .photo img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  .hobby p {
+    font-size: 0.9rem;
+  }
+}
 
 .about {
   display: flex;
