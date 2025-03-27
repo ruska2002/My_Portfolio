@@ -333,7 +333,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 /************ About me ************/
-/* Default styles */
+.about-text,
+.hobby-text {
+  display: block;
+  transition: max-height 0.3s ease-in-out; /* Smooth transition */
+}
+
 .about {
   display: flex;
   flex-wrap: wrap;
@@ -362,6 +367,38 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 @media (max-width: 768px) {
+  .about-text,
+  .hobby-text {
+    max-height: 100px; /* Adjust to limit the visible text */
+    overflow: hidden; /* Hide the extra text */
+    text-overflow: ellipsis; /* Adds "..." when text is cut off */
+  }
+
+  /* Hide the checkbox but allow it to toggle the text */
+  .read-more-toggle {
+    display: none;
+  }
+
+  /* When the checkbox is checked, show the full text */
+  .read-more-toggle:checked + .read-more-label + .about-text {
+    max-height: none; /* Remove max-height to reveal full text */
+  }
+
+  .read-more-toggle:checked + .read-more-label + .hobby-text {
+    max-height: none; /* Remove max-height to reveal full text */
+  }
+
+  /* Style for the Read More button */
+  .read-more-label {
+    cursor: pointer;
+    color: #007bff;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
+  .read-more-label:hover {
+    color: #0056b3;
+  }
   .wholediv {
     flex-direction: column;
     align-items: center;

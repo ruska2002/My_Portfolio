@@ -1,4 +1,5 @@
 import myImage from "../assets/img/myphoto.jpg";
+
 export default function About() {
   return (
     <section className="about" id="aboutme">
@@ -8,7 +9,7 @@ export default function About() {
         </div>
         <div className="aboutme">
           <h1>ABOUT ME</h1>
-          <p>
+          <p className="about-text">
             Hello! I’m Ruska, a web developer with a passion for building
             interactive and responsive websites. I started my journey in 2022,
             studying Computer Science, where I developed a solid understanding
@@ -24,11 +25,19 @@ export default function About() {
             experiences and efficient websites, I’m always excited to tackle new
             challenges and grow as a web developer.
           </p>
+          <input
+            type="checkbox"
+            id="read-more-about"
+            className="read-more-toggle"
+          />
+          <label htmlFor="read-more-about" className="read-more-label">
+            Read More
+          </label>
         </div>
       </div>
       <div className="hobby">
         <h2>My Hobby</h2>
-        <p>
+        <p className="hobby-text">
           When I'm not coding, I enjoy watching films that explore sensitive and
           thought-provoking topics like racism, Nazism, and their impact on
           human emotions. I find it fascinating to learn about the fears,
@@ -37,7 +46,7 @@ export default function About() {
           emotional response, and they provide a deeper understanding of how
           history has shaped the present.
         </p>
-        <p>
+        <p className="hobby-text">
           Additionally, I love watching films based on true stories, real
           videos, and diving into investigative topics like serial killers and
           unsolved mysteries. It's fascinating to analyze real-life events
@@ -45,6 +54,14 @@ export default function About() {
           perspectives on the complexities of human behavior and societal
           issues.
         </p>
+        <input
+          type="checkbox"
+          id="read-more-hobby"
+          className="read-more-toggle"
+        />
+        <label htmlFor="read-more-hobby" className="read-more-label">
+          Read More
+        </label>
       </div>
     </section>
   );
